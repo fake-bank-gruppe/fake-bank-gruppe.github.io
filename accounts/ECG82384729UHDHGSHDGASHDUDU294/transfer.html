@@ -730,7 +730,7 @@ li.nav-item {
 
 <h1>Make a transfer</h1>            
 <notice>Our systems only allow to make a transfer between your accounts, to transfer outside of your accounts then please contact your bank
-</notice><br><notice style="margin-top: 30px;">NOTICE: The only account elagble to transfer to is XXX1329, this is because your account is locked or because this account is your prefered one.</notice>  <br><br><form action="/myacc">
+</notice><br><notice style="margin-top: 30px;">NOTICE: The only account elagble to transfer to is XXX1329, this is because your account is locked or because this account is your prefered one.</notice>  <br><br><form action="/myacc-6993">
     <label>Amount</label>  <style>
         /* Styles to visually indicate the input is not editable and prevent interaction */
         input[readonly] {
@@ -746,21 +746,28 @@ li.nav-item {
         input[readonly]::-moz-selection {
             background: none;
         }
-    </style>  <input type="text" value="$120.00 USD" readonly="" onkeydown="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" onfocus="this.blur()" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">  <p>Amout is pre-set due to account settings</p><label for="fromDropdown">From:</label>
-    <select id="fromDropdown" name="from">
-        <option value="XXXX6993">XXXX6993</option>
-        <option value="XXXX1329">XXXX1329</option>
-        <option value="XXXX3198">XXXX3198</option>
-    </select>
+    </style>  <input type="text" value="$120.00 USD" readonly="" onkeydown="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" onfocus="this.blur()" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">  <p>Amount is pre-set due to account settings</p>
+    
+ <style>
+        /* Styles to visually indicate the input is not editable and prevent interaction */
+        input[readonly] {
+            background-color: #f3f3f3; /* Light grey background */
+            cursor: not-allowed; /* Show a "not allowed" cursor on hover */
+            color: #000; /* Dim text color */
+        }
 
+        /* Disable text selection */
+        input[readonly]::selection {
+            background: none;
+        }
+        input[readonly]::-moz-selection {
+            background: none;
+        }
+    </style> <lable>From</lable> <input type="text" value="XXXX6993" readonly="" onkeydown="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" onfocus="this.blur()" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">  <p>Account is pre-set due to account settings</p>
     <br>
 
-    <label for="toDropdown">To:</label>
-    <select id="toDropdown" name="to">
-        
-        <option value="XXXX1329">XXXX1329</option>
-        
-    </select>
+    <label>To</label><input type="text" value="XXXX1329" readonly="" onkeydown="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" onfocus="this.blur()" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+    
 
     <br><br>
 
@@ -824,6 +831,7 @@ The bank information provided on this website is only valid for those living in 
     
 
   
+
 
 
 
