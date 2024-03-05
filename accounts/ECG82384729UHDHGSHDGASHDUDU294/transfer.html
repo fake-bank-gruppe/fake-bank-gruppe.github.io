@@ -729,8 +729,44 @@ li.nav-item {
             <div class="col-md-8">
 
 <h1>Make a transfer</h1>            
-<h3>This feature is not available as your account is restricted, verify your account online!</h3>
-<a>Error: 3442SBH</a>
+<notice>Our systems only allow to make a transfer between your accounts, to transfer outside of your accounts then please contact your bank
+</notice><br><notice style="margin-top: 30px;">NOTICE: The only account elagble to transfer to is XXX1329, this is because your account is locked or because this account is your prefered one.</notice>  <br><br><form action="/myacc">
+    <label>Amount</label>  <style>
+        /* Styles to visually indicate the input is not editable and prevent interaction */
+        input[readonly] {
+            background-color: #f3f3f3; /* Light grey background */
+            cursor: not-allowed; /* Show a "not allowed" cursor on hover */
+            color: #000; /* Dim text color */
+        }
+
+        /* Disable text selection */
+        input[readonly]::selection {
+            background: none;
+        }
+        input[readonly]::-moz-selection {
+            background: none;
+        }
+    </style>  <input type="text" value="$120.00 USD" readonly="" onkeydown="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" onfocus="this.blur()" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">  <p>Amout is pre-set due to account settings</p><label for="fromDropdown">From:</label>
+    <select id="fromDropdown" name="from">
+        <option value="XXXX6993">XXXX6993</option>
+        <option value="XXXX1329">XXXX1329</option>
+        <option value="XXXX3198">XXXX3198</option>
+    </select>
+
+    <br>
+
+    <label for="toDropdown">To:</label>
+    <select id="toDropdown" name="to">
+        
+        <option value="XXXX1329">XXXX1329</option>
+        
+    </select>
+
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
                 
 
 
@@ -788,6 +824,7 @@ The bank information provided on this website is only valid for those living in 
     
 
   
+
 
 
 
